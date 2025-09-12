@@ -7,8 +7,25 @@
 
 body {
     background-color: #f0f0f0;
-    color: #333;
+    background-image: url(./images/hatter.jpg);
     line-height: 1.6;
+    color: white;
+
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: clamp(300px, 90%, 1200px);
+    margin: 20px auto;
+}
+
+#airsoft-1 {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: 5px dotted white;
 }
 
 .container {
@@ -18,12 +35,9 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #2c3e50, #4a6491);
-    color: white;
     padding: 2rem 0;
     text-align: center;
     margin-bottom: 2rem;
-    border-bottom: 5px solid #e74c3c;
 }
 
 h1 {
@@ -50,9 +64,6 @@ p {
 }
 
 .content-box {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin-bottom: 2rem;
 }
