@@ -1,0 +1,98 @@
+:root {
+    --primary-background-color: #32b5e5;
+    --secondary-background-color: #eeeeee;
+    --header-background-color: #800080;
+    --secondary-text-color: white;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: 87px 6fr 54px;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right"
+        "footer footer footer";
+    gap: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--header-background-color);
+    color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside.siedebar {
+    grid-area: sidebar-left;
+}
+
+section.content {
+    grid-area: main;
+}
+
+aside.ads {
+    grid-area: sidebar-right;
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--primary-background-color);
+    padding: 10px;
+    margin-right: 1vw;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-background-color);
+    color: var(--secondary-text-color);
+}
+
+section.content article {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #c3c3c3;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+aside.sidebar {
+    padding: 10px;
+}
+
+aside.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside.sidebar ul li {
+    margin-bottom: 10px;
+    background-color: #32b5e5;
+    padding: 5px;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "sidebar-left"
+            "main"
+            "sidebar-right"
+            "footer";
+    }
+
+    aside.ads {
+        display: none;
+        margin: 0;
+    }
+}
