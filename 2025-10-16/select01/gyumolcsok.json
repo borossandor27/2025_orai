@@ -1,0 +1,20 @@
+[
+    {
+        "neve": "alma",
+        "ara": 200,
+        "mennyiseg": 5,
+        "keszleten": true
+    },
+    {
+        "neve": "korte",
+        "ara": 300,
+        "mennyiseg": 3,
+        "keszleten": false
+    },
+    {
+        "neve": "banan",
+        "ara": 400,
+        "mennyiseg": 8,
+        "keszleten": true
+    }
+]
