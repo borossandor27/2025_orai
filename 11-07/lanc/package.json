@@ -1,0 +1,16 @@
+{
+  "name": "lanc",
+  "version": "1.0.0",
+  "description": "Middleware láncok egyszerű létrehozásához és kezeléséhez Node.js környezetben.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
