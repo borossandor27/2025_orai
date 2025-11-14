@@ -7,11 +7,11 @@ const pool = mysql.createPool({
   password: process.env.PASSWORD || '',
   database: process.env.DATABASE || 'users_db',
   port: process.env.PORT || 3306,
-    connectionLimit: 10, // Optional: limit number of connections
-    // kapcsolatási időkorlát beállítása (opcionális)
-    connectTimeout: 10000, // 10 másodperc
-    // sorban álló lekérdezések időkorlátja (opcionális)
-    queueLimit: 0, // nincs korlát
+  connectionLimit: 10, // Optional: limit number of connections
+  // kapcsolatási időkorlát beállítása (opcionális)
+  connectTimeout: 10000, // 10 másodperc
+  // sorban álló lekérdezések időkorlátja (opcionális)
+  queueLimit: 0, // nincs korlát
 });
 
 export default pool;
