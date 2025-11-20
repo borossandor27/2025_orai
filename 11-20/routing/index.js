@@ -4,6 +4,7 @@ const app = express();
 import cors from 'cors';
 app.use(cors()); // Kikapcsolja a CORS korlátozásokat
 
+app.use(express.json()); // Beállítja, hogy a bejövő kérések JSON formátumúak legyenek
 import ordersRouter from './routes/ordersRouter.js';
 import productsRouter from './routes/productsRouter.js';
 import customersRouter from './routes/customersRouter.js';
