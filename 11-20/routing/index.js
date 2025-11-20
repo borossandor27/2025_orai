@@ -7,8 +7,8 @@ app.use(cors()); // Kikapcsolja a CORS korlátozásokat
 import ordersRouter from './routes/ordersRouter.js';
 import productsRouter from './routes/productsRouter.js';
 import customersRouter from './routes/customersRouter.js';
-import 	categoriesRouter from './routes/categoriesRouter.js';
-import 	order_itemsRouter from './routes/order_itemsRouter.js';
+import categoriesRouter from './routes/categoriesRouter.js';
+import order_itemsRouter from './routes/order_itemsRouter.js';
 
 app.use('/orders', ordersRouter); //becsatolja az ordersRouter-t az /orders útvonalra
 app.use('/products', productsRouter);

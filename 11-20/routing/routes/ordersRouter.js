@@ -1,10 +1,16 @@
 import express from 'express';
+import * as ordersModel from '../model/ordersModel.js';
 
 const ordersRouter = express.Router();
 
-ordersRouter.get('/', (req, res) => {
+ordersRouter.get('/', async (req, res) => {
     // a teljes útvonal: /orders/
-    res.send('Összes rendelés lekérése');
+    try {
+        const orders = await ordersModel.getAllOrders();
+        res.status(200).send(orders);
+    } catch (error) {
+        res.status(500).send({ error: 'Hiba történt a rendelések lekérése során.' });
+    }
 });
 
 ordersRouter.get('/:id', (req, res) => {
