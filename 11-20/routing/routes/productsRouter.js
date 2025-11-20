@@ -2,7 +2,7 @@ import express from 'express';
 const productsRouter = express.Router();
 
 productsRouter.get('/', (req, res) => {
-    // a teljes útvonal: /products/
+    // a teljes útvonal: http://localhost:3000/products/
     res.send('Összes termék lekérése');
 });
 
