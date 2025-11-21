@@ -30,5 +30,10 @@ export const atutalas = async (fromAccountId, toAccountId, amount) => {
         await connection.commit(); //tranzakció véglegesítése
     } catch (error) {
         await connection.rollback();
+        throw error;
+    } finally {
+        connection.release(); //kapcsolat visszaadása a poolnak
+    }
+};
 
-        export default pool;
+export default pool;
