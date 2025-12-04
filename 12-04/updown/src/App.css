@@ -1,0 +1,25 @@
+#root {
+  background-color: aqua;
+}
+#kezeloPanel {
+  display: flex;
+  flex-direction: row;
+}
+#kezeloPanel p {
+  margin: 0 10px;
+}
+#kezeloPanel button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#kezeloPanel button.up {
+  background-color: lightgreen;
+}
+#kezeloPanel button.down {
+  background-color: lightcoral;
+}
