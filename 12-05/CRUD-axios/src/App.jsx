@@ -4,9 +4,7 @@ import { useState, useEffect, use } from 'react'
 
 function App() {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
+ 
 
   const url = "https://retoolapi.dev/yEtUV8/data";
 
@@ -72,6 +70,9 @@ function App() {
       console.error("Error deleting data:", error.message);
     }
   };
+   useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <h1>CRUD with Axios</h1>
