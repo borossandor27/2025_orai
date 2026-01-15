@@ -1,10 +1,12 @@
-import { createContext, Context, useState, useEffect } from "react";
+import { createContext, useState, useContext } from "react";
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ outlet }) => {
+export const AuthProvider = ({ children  }) => {
     const [user, setUser] = useState(null);
+
     const login = (username) => {
+        // jogosultság ellenőrzés itt
         setUser({ name: username });
     };
 
@@ -14,9 +16,11 @@ export const AuthProvider = ({ outlet }) => {
 
     return (
         <AuthContext.Provider value={{ user, login, logout }}>
-            {outlet}
+            {children}
         </AuthContext.Provider>
     );
 }
-
+export function useAuth() {
+    return useContext(AuthContext);
+}
 
