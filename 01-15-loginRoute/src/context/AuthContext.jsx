@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
@@ -7,6 +8,7 @@ export const AuthProvider = ({ children  }) => {
         az ebben lévő felhasználói adatokat és metódusokat
         akarjuk átadni a komponenseknek */}
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     const login = (username, email, role) => {
         // jogosultság ellenőrzés itt és csak azután állítjuk be a user-t
@@ -15,6 +17,7 @@ export const AuthProvider = ({ children  }) => {
 
     const logout = () => {
         setUser(null);
+        navigate('/');
     };
 
     return (

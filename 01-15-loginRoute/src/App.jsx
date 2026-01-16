@@ -8,15 +8,16 @@ import { AuthProvider } from './context/AuthContext.jsx'
 function App() {
 
   return (
-    <AuthProvider>
-      {/* a BrowserRouter komponensben is használni szeretnénk a hitelesítési kontextust */}
+    <>
       <BrowserRouter>
-        <Navbar />
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
-    </AuthProvider>
+        <AuthProvider>
+          <Navbar />
+          <Header />
+          <Main />
+          <Footer />
+        </AuthProvider>
+      </BrowserRouter >
+    </>
   )
 }
 
