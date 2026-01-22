@@ -28,6 +28,29 @@ const authenticateToken = (req, res, next) => {
         next();
     });
 };
+app.post('/register', async (req, res) => {
+    const { username, password, email } = req.body;
+
+    try {
+        if (!username || !password || !email) {
+            return res.status(400).json({ message: 'Hiányzó adatok' });
+        }
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        await db.execute(
+            'INSERT INTO users (username, password, email) VALUES (?, ?, ?)',
+            [username, hashedPassword, email]
+        );
+
+        res.status(201).json({ message: 'Felhasználó sikeresen regisztrálva' });
+    }
+    catch (error) {
+        console.error(error); // 👈 KRITIKUS hibakereséshez
+        res.status(500).json({ message: 'Hiba a regisztráció során' });
+    }
+});
+
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -37,6 +60,7 @@ app.post('/login', async (req, res) => {
         }
         const user = rows[0];
         const validPassword = await bcrypt.compare(password, user.password);
+        console.log(validPassword);
         if (!validPassword) {
             return res.status(400).json({ message: 'Hibás jelszó' });
         }

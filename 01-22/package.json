@@ -1,5 +1,5 @@
 {
-  "name": "JWT_hasznalata",
+  "name": "jwt-auth-nodejs",
   "version": "1.0.0",
   "description": "JSON Web Token alapú autentikáció Node.js alkalmazásban",
   "main": "index.js",
