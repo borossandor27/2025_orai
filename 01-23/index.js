@@ -38,28 +38,45 @@ app.post('/login', async (req, res) => {
     if (!username || !password) {
         return res.status(400).json({ message: 'Username and password are required.' });
     }
-    const [rows] = await db.execute(
-        'SELECT userid, username, password FROM users WHERE username = ?',
-        [username]
-    );
 
-    if (rows.length === 0) {
-        return res.status(401).json({ message: 'Hibás felhasználónév vagy jelszó' });
+    try {
+        console.log('Executing query...');
+        const result = await db.execute(
+            'SELECT userid, username, password FROM users WHERE username = ?',
+            [username]
+        );
+
+        console.log('Query result:', result);
+        console.log('Result type:', typeof result);
+        console.log('Result is array?', Array.isArray(result));
+
+        // A result egy tömb, az első eleme a rows
+        const rows = result[0];
+        console.log('Rows:', rows);
+        console.log('Rows length:', rows.length);
+        console.log('Rows type:', typeof rows);
+        console.log('User found:', rows);
+
+        if (rows.length === 0) {
+            return res.status(401).json({ message: 'Hibás felhasználónév vagy jelszó' });
+        }
+        const user = rows[0];
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Hibás felhasználónév vagy jelszó' });
+        }
+
+        const token = generateToken(user);
+
+        res.json({
+            message: 'Sikeres belépés',
+            token
+        });
+    } catch (error) {
+        console.error('Error executing query:', error);
+        return res.status(500).json({ message: 'Database error', error: error.message });
     }
-    console.log('User found:', rows[0]);
-    const user = rows[0];
-    const isMatch = await bcrypt.compare(password, user.password);
-
-    if (!isMatch) {
-        return res.status(401).json({ message: 'Hibás felhasználónév vagy jelszó' });
-    }
-
-    const token = generateToken(user);
-
-    res.json({
-        message: 'Sikeres belépés',
-        token
-    });
 });
 
 app.post('/register', async (req, res) => {
