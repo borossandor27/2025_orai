@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Statisztika/Statisztika.csproj" />
+  <Project Path="TelepulesekApp/TelepulesekApp.csproj" />
+</Solution>
