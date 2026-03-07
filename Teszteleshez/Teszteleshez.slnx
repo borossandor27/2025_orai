@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Teszteleshez/Teszteleshez.csproj" Id="e5940d78-94d2-442c-a501-3137601ecb19" />
-  <Project Path="VizsgaremekTelepito/VizsgaremekTelepito.vdproj" Type="Installer" />
+  <Project Path="VizsgaremekTelepito/VizsgaremekTelepito.vdproj" Type="Installer">
+    <Build />
+  </Project>
 </Solution>

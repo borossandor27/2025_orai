@@ -1,0 +1,9 @@
+<data name="WelcomeText" xml:space="preserve">
+    <value>Üdvözöljük a telepítőben!</value>
+</data>
+<data name="InstallButton" xml:space="preserve">
+    <value>Telepítés</value>
+</data>
+<data name="ExitMessage" xml:space="preserve">
+    <value>Biztos, hogy ki szeretne lépni?</value>
+</data>
