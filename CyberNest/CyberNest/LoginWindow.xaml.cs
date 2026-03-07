@@ -35,8 +35,10 @@ namespace CyberNest
                     {
                         // Itt elmentheted a token-t későbbi használatra
                         // pl. Properties.Settings.Default.Token = result.Token;
-
+                        AdminData admin = (AdminData) result;
+                        AuthService.Token = admin.Token;
                         this.DialogResult = true;
+
                         this.Close();
                     }
                     else

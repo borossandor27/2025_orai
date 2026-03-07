@@ -1,12 +1,19 @@
 ﻿<Window x:Class="CyberNest.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CyberNest"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Időpontok listája" Height="450" Width="900" 
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <DataGrid x:Name="IdopontokGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Dátum" Binding="{Binding Atvetel_datum, StringFormat=\{0:yyyy.MM.dd\}}" Width="100"/>
+                <DataGridTextColumn Header="Időpont" Binding="{Binding Atvetel_idopont}" Width="80"/>
+                <DataGridTextColumn Header="CPU" Binding="{Binding Cpu}" Width="*"/>
+                <DataGridTextColumn Header="RAM" Binding="{Binding Ram}" Width="100"/>
+                <DataGridTextColumn Header="HDD" Binding="{Binding Hdd}" Width="150"/>
+                <DataGridTextColumn Header="Státusz" Binding="{Binding Statusz}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

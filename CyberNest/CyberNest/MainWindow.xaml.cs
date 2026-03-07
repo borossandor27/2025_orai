@@ -1,24 +1,31 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using CyberNest.Models;
+using CyberNest.Services;
 
 namespace CyberNest
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ApiService<Idopont> _apiService;
+
         public MainWindow()
         {
             InitializeComponent();
+            _apiService = new ApiService<Idopont>("http://localhost:5050/api/");
+            LoadData();
+        }
+
+        private async void LoadData()
+        {
+            var adatok = await _apiService.GetAllAsync("idopont");
+            if (adatok != null)
+            {
+                IdopontokGrid.ItemsSource = adatok;
+            }
+            else
+            {
+                MessageBox.Show("Nem sikerült az adatok letöltése!");
+            }
         }
     }
 }

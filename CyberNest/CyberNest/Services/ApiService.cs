@@ -1,6 +1,9 @@
 ﻿using System.Net.Http;
+using System.Net.Http.Json;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using CyberNest.Services;
 
 
 namespace CyberNest.Services
@@ -26,6 +29,13 @@ namespace CyberNest.Services
         // GET: Összes lekérése
         public async Task<List<T>> GetAllAsync(string endpoint)
         {
+            // Token hozzáadása, ha létezik
+            if (!string.IsNullOrEmpty(AuthService.Token))
+            {
+                _client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", AuthService.Token);
+            }
+
             var response = await _client.GetAsync(_baseUrl + endpoint);
 
             if (!response.IsSuccessStatusCode)
