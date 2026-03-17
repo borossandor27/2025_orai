@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Öregfák - Fák listája</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <span class="navbar-brand text-white">Öregfák</span>
+
+        <div class="ms-auto">
+            <a href="home.html">Kezdőlap</a>
+            <a href="fak_listaja.html" class="active">Fák listája</a>
+            <a href="uj_fa.html">Új fa</a>
+            <a href="keplink.html">Képek</a>
+        </div>
+    </nav>
+
+
+    <div class="container page-container">
+
+        <h2>Fák listája</h2>
+
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Azon</th>
+                    <th>Faj</th>
+                    <th>Körméret</th>
+                    <th>Mérés éve</th>
+                    <th>Település</th>
+                    <th>Kép</th>
+                    <th>Művelet</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>10</td>
+                    <td>Platán</td>
+                    <td>610</td>
+                    <td>2023</td>
+                    <td>Budapest</td>
+                    <td>kepek/10.jpg</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm">
+                            Törlés
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>11</td>
+                    <td>Hárs</td>
+                    <td>380</td>
+                    <td>2021</td>
+                    <td>Szeged</td>
+                    <td class="text-muted">Nincs kép</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm">
+                            Törlés
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

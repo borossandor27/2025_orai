@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Öregfák - Új fa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <span class="navbar-brand text-white">Öregfák</span>
+
+        <div class="ms-auto">
+            <a href="home.html">Kezdőlap</a>
+            <a href="fak_listaja.html">Fák listája</a>
+            <a href="uj_fa.html" class="active">Új fa</a>
+            <a href="keplink.html">Képek</a>
+        </div>
+    </nav>
+
+
+    <div class="container form-container">
+
+        <h2>Új fa felvétele</h2>
+
+
+        <form>
+
+            <!-- Faj -->
+
+            <div class="mb-3">
+                <label class="form-label">Faj</label>
+                <input type="text" class="form-control">
+            </div>
+
+
+            <!-- Körméret és év -->
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Körméret (cm)</label>
+                    <input type="number" class="form-control">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Mérés éve</label>
+                    <input type="number" class="form-control">
+                </div>
+
+            </div>
+
+
+            <!-- Település -->
+
+            <div class="mb-3">
+                <label class="form-label">Település</label>
+
+                <select class="form-select">
+                    <option selected disabled>Válasszon települést...</option>
+                    <option>Budapest</option>
+                    <option>Szeged</option>
+                    <option>Debrecen</option>
+                    <option>Pécs</option>
+                </select>
+
+            </div>
+
+
+            <!-- Kép link -->
+
+            <div class="mb-3">
+                <label class="form-label">Fa fényképének linkje</label>
+
+                <input type="text" class="form-control" placeholder="kepek/1.jpg vagy https://...">
+
+            </div>
+
+
+            <!-- Mentés -->
+
+            <button class="btn btn-primary w-100">
+                Mentés
+            </button>
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

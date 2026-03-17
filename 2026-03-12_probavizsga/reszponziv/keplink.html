@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Öregfák - Képlink módosítása</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <span class="navbar-brand text-white">Öregfák</span>
+
+        <div class="ms-auto">
+            <a href="home.html">Kezdőlap</a>
+            <a href="fak_listaja.html">Fák listája</a>
+            <a href="uj_fa.html">Új fa</a>
+            <a href="keplink.html" class="active">Képek</a>
+        </div>
+    </nav>
+
+
+    <div class="container form-container">
+
+        <h2>Képlink módosítása</h2>
+       
+        <form>
+
+            <!-- Fa kiválasztása -->
+            <div class="mb-3">
+                <label class="form-label">Fa kiválasztása</label>
+                <select class="form-select">
+                    <option selected disabled>Válasszon...</option>
+                    <option>Tölgy</option>
+                    <option>Platán</option>
+                    <option>Bükk</option>
+                </select>
+            </div>
+
+            <!-- Új képlink -->
+            <div class="mb-3">
+                <label class="form-label">Új képlink</label>
+                <input type="text" class="form-control" placeholder="kepek/3.jpg vagy https://...">
+            </div>
+
+            <!-- Mentés gomb -->
+            <button class="btn btn-primary w-100">
+                Mentés
+            </button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
