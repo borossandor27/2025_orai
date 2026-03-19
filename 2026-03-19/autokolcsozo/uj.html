@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./autok.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Autókölcsönző</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" aria-current="page" href="./lista.html">Lista</a>
+                <a class="nav-link active" href="./uj.html">Új</a>
+                <a class="nav-link" href="./kep.html">Kép</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container d-flex justify-content-center">
+        <form class="col-7">
+            <div class="mb-3">
+                <label for="marka" class="form-label">Márka</label>
+                <input type="text" class="form-control" id="marka">
+            </div>
+            <div class="mb-3">
+                <label for="modell" class="form-label">Modell</label>
+                <input type="text" class="form-control" id="modell">
+            </div>
+            <div class="mb-3">
+                <label for="evjarat" class="form-label">Évjárat</label>
+                <input type="number" class="form-control" id="evjarat">
+            </div>
+            <div class="mb-3">
+                <label for="napi_dij" class="form-label">Napi díj</label>
+                <input type="number" class="form-control" id="napi_dij">
+            </div>
+            <div class="mb-3">
+                <label for="kep" class="form-label">Kép</label>
+                <input type="text" class="form-control" id="kep">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Mentés</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

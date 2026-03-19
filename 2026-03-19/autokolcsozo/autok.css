@@ -1,0 +1,10 @@
+header{
+    background-image: url(./autokolcsonzo_fejlecbe.png);
+    color: white;
+    height: 350px;
+    width: 100%;
+}
+#overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}

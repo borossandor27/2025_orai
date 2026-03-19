@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./autok.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Autókölcsönző</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="./lista.html">Lista</a>
+                <a class="nav-link" href="./uj.html">Új</a>
+                <a class="nav-link" href="./kep.html">Kép</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>Autók Listája</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th title="Field #1">ID</th>
+                    <th title="Field #2">Márka</th>
+                    <th title="Field #3">Modell</th>
+                    <th title="Field #4">Évjárat</th>
+                    <th title="Field #5">Napi díj</th>
+                    <th title="Field #6">Kép</th>
+                    <th>Művelet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="right">1</td>
+                    <td>Toyota</td>
+                    <td>Corolla</td>
+                    <td align="right">2022</td>
+                    <td>12 000 Ft</td>
+                    <td>kepek/corolla.jpg </td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Töröl</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">2</td>
+                    <td>Ford</td>
+                    <td>Focus</td>
+                    <td align="right">2021</td>
+                    <td>10 000 Ft</td>
+                    <td>Nincs kép </td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Töröl</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

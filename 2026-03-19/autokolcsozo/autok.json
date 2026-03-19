@@ -1,0 +1,18 @@
+[
+  {
+    "ID": 1,
+    "Márka": "Toyota",
+    "Modell": "Corolla",
+    "Évjárat": 2022,
+    "Napi díj": "12 000 Ft",
+    "Kép ": "kepek/corolla.jpg "
+  },
+  {
+    "ID": 2,
+    "Márka": "Ford",
+    "Modell": "Focus",
+    "Évjárat": 2021,
+    "Napi díj": "10 000 Ft",
+    "Kép ": "Nincs kép "
+  }
+]
