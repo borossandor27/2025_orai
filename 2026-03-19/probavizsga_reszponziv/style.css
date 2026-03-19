@@ -1,0 +1,54 @@
+body{
+    background:#f8f9fa;
+}
+
+/* nyitóoldal */
+.hero {
+    background-image: url("./kepek/10.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.cards {
+    margin-top: 40px;
+}
+
+/* navbar */
+.navbar a {
+    color: #ccc;
+    margin-left: 15px;
+    text-decoration: none;
+}
+.navbar a.active {
+    font-weight: bold;
+    color: rgb(100,100,160);
+}
+.page-container {
+    margin-top: 40px;
+}
+
+/* képlink.html */
+.form-container {
+    max-width: 700px;
+    margin-top: 40px; 
+}
