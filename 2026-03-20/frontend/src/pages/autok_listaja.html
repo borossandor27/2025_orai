@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autók listája</title>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./autokolcsonzo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Autókölcsönző</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="./autok_listaja.html">Lista</a>
+                <a class="nav-link" href="./uj_auto.html">Új autó</a>
+                <a class="nav-link" href="./kep_modositas.html">Képek</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h2>Autók listája</h2>
+
+        <p class="text-muted">Minta adatok</p>
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Márka</th>
+                    <th>Modell</th>
+                    <th>Évjárat</th>
+                    <th>Napi díj</th>
+                    <th>Kép</th>
+                    <th>Művelet</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Toyota</td>
+                    <td>Corolla</td>
+                    <td>2022</td>
+                    <td>12000 Ft</td>
+                    <td>kepek/corolla.jpg</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm">
+                            Törlés
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Ford</td>
+                    <td>Focus</td>
+                    <td>2021</td>
+                    <td>10000 Ft</td>
+                    <td>Nincs kép</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm">
+                            Törlés
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

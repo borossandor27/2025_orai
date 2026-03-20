@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Új autó</title>
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./autokolcsonzo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Autókölcsönző</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="./autok_listaja.html">Lista</a>
+                <a class="nav-link" href="./uj_auto.html">Új autó</a>
+                <a class="nav-link" href="./kep_modositas.html">Képek</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+
+        <h2>Új autó felvétele</h2>
+
+        <form>
+
+            <div class="mb-3">
+                <label class="form-label">Márka</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Modell</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Évjárat</label>
+                    <input type="number" class="form-control">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Napi díj (Ft)</label>
+                    <input type="number" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Kép linkje</label>
+                <input type="text" class="form-control" placeholder="kepek/auto.jpg">
+            </div>
+
+            <button class="btn btn-primary w-100">
+                Mentés
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

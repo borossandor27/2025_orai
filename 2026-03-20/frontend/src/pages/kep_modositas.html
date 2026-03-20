@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Képlink módosítása</title>
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./autokolcsonzo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Autókölcsönző</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="./autok_listaja.html">Lista</a>
+                <a class="nav-link" href="./uj_auto.html">Új autó</a>
+                <a class="nav-link" href="./kep_modositas.html">Képek</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+
+        <h2>Képlink módosítása</h2>
+
+        <form>
+
+            <div class="mb-3">
+
+                <label class="form-label">Autó kiválasztása</label>
+
+                <select class="form-select">
+                    <option>Toyota Corolla</option>
+                    <option>Ford Focus</option>
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">Új kép link</label>
+
+                <input type="text" class="form-control" placeholder="kepek/corolla.jpg">
+
+            </div>
+
+            <button class="btn btn-primary w-100">
+                Mentés
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
